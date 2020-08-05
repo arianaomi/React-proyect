@@ -12,32 +12,28 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
         <Greet firstName='Naomi' lastName='Puertos' />
         <ClassGreet firstName='Ariana' lastName='López' />
       </header>
       <Container>
         <Row>
-          <Col>
+          <Col xs='12' md='4'>
             <Post
               img={logo}
               title='What is Lorem Ipsum?'
               subtitle='Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-              text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
+              text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of printing. '
             />
           </Col>
-          <Col xs='12' sm='6'>
+          <Col xs='12' md='4'>
+            <Post
+              img='https://loremipsum.io/assets/images/lorem-ipsum-generator-custom-placeholder-text.jpg'
+              title='Why do we use it?'
+              subtitle='It is a long established fact that a reader will be distracted '
+              text='It is a long established fact that a reader will be distracted It is a long established fact that a reader will be distracted '
+            />
+          </Col>
+          <Col xs='12' md='4'>
             <Post
               img='https://loremipsum.io/assets/images/lorem-ipsum-generator-custom-placeholder-text.jpg'
               title='Why do we use it?'

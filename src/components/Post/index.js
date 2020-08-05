@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 
 import {
   Card,
@@ -14,7 +15,7 @@ const Post = ({ title, subtitle, text, img }) => {
   return (
     <>
       <Card>
-        <CardImg top width='10%' src={img} alt='' />
+        <CardImg top className='cardImg' src={img} alt='' />
         <CardBody>
           <CardTitle>{title}</CardTitle>
           <CardSubtitle>{subtitle}</CardSubtitle>
