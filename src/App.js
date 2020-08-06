@@ -7,6 +7,7 @@ import { Container, Row, Col } from 'reactstrap'
 import Greet from './components/FunctionGreet/index'
 import ClassGreet from './components/ClassGreet/index'
 import Post from './components/Post/index'
+import Clock from './components/Clock'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <header className='App-header'>
         <Greet firstName='Naomi' lastName='Puertos' />
         <ClassGreet firstName='Ariana' lastName='López' />
+        <Clock />
       </header>
       <Container>
         <Row>
