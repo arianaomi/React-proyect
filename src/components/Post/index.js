@@ -14,7 +14,7 @@ import {
 const Post = ({ title, subtitle, text, img }) => {
   return (
     <>
-      <Card>
+      <Card className='card'>
         <CardImg top className='cardImg' src={img} alt='' />
         <CardBody>
           <CardTitle>{title}</CardTitle>

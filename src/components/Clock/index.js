@@ -18,7 +18,7 @@ class Clock extends Component {
     setInterval(() => {
       this.setState({
         date: new Date().toLocaleTimeString(),
-      }) //! funcion asincrona})
+      }) //! funcion asincrona
     }, 1000)
 
     setTimeout(() => {
