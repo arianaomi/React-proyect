@@ -17,7 +17,7 @@ const Post = ({ title, subtitle, text, img }) => {
       <Card className='card'>
         <CardImg top className='cardImg' src={img} alt='' />
         <CardBody>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className='cardTitle'>{title}</CardTitle>
           <CardSubtitle>{subtitle}</CardSubtitle>
           <CardText>{text}</CardText>
           <Button color='info' size='lg' block>

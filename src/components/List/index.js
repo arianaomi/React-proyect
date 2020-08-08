@@ -11,8 +11,8 @@ import {
   Button,
 } from 'reactstrap'
 
-//const elements = [{ text: 'Text 1' }, { text: 'Text 2' }, { text: 'Text 3' }]
-const elements = []
+const elements = [{ text: 'Text 1' }, { text: 'Text 2' }, { text: 'Text 3' }]
+//const elements = []
 class List extends Component {
   constructor(props) {
     super(props)
@@ -45,25 +45,19 @@ class List extends Component {
       )
     })
 
-    /*
-      UIElements -> [] -> have a length property
-      if (!UIElements.length) -> if(!0) -> if(!false)
-      if (!false) -> if (true)
-    */
-
     if (!UIElements.length) {
       UIElements = (
-        <h1>
+        <h2>
           No hay <Badge color='danger'>elementos</Badge>
-        </h1>
+        </h2>
       )
     }
 
     return (
-      <Container>
+      <Container className='listSwitch'>
         <Row>
           <Col>{activeList ? <ListGroup>{UIElements}</ListGroup> : null}</Col>
-          <Button onClick={this.handleShowListClick}>
+          <Button color='dark' onClick={this.handleShowListClick}>
             {activeList ? 'Hide list' : 'Show List'}
           </Button>
         </Row>

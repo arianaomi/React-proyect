@@ -30,10 +30,12 @@ class SwitchExample extends Component {
         <Container>
           <Row>
             <Col>
-              <p>
-                <Badge color={color}>Holi</Badge>
-              </p>
-              <Button onClick={this.handleClickSwitch}>Switch color</Button>
+              <h1>
+                <Badge color={color}>Cambio de color</Badge>
+              </h1>
+              <Button color='dark' onClick={this.handleClickSwitch}>
+                Switch color
+              </Button>
             </Col>
           </Row>
         </Container>
