@@ -5,17 +5,30 @@ class CurrencyConverter extends Component {
     super(props)
     this.state = {
       quantityMXN: 0,
-      quiantityDLS: 0,
+      quantityDLS: 0,
     }
   }
   render() {
-    const { quantityMXN, quiantityDLS } = this.state
+    const { quantityMXN, quantityDLS: quantityDLS } = this.state
     return (
-      <div>
-        <form>
-          <input type='number' name='' value='' onChange=''></input>
-        </form>
-      </div>
+      <>
+        <div>
+          <form>
+            <input
+              type='number'
+              name='quantityMXN'
+              value={quantityMXN}
+              onChange=''
+            ></input>
+            <input
+              type='number'
+              name='quantityDLS'
+              value={quantityDLS}
+              onChange=''
+            ></input>
+          </form>
+        </div>
+      </>
     )
   }
 }

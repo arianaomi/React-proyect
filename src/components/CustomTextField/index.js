@@ -10,7 +10,6 @@ class CustomTextField extends Component {
   }
 
   handleChange({ target: { name, value } }) {
-    console.log('soy el hijo', name, value)
     this.props.callback(name, value)
   }
 
