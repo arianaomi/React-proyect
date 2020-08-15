@@ -1,37 +1,31 @@
 import React from 'react'
 import './App.css'
-//React Router Dom
-//! solo un router como padre
-//* un alias con as
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+//* React Router Dom: ! solo un router como padre, se pueden poner alis con as
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Screens
-import NotesBlog from './screens/NotesBlog'
-import CurrencyConverter from './screens/CurrencyConverter'
-import Users from './screens/Users'
+import CurrencyConverter from './screens/CurrencyConvert'
+import Hooks from './screens/Hooks'
+
 //Components
-import Navbar from './components/Navbar'
+import Menu from './components/Menu'
 
 function App() {
   return (
     <Router>
       <div className='App'>
-        <Navbar
-          link1={<Link to='/notesBlog'>Blog de notas</Link>}
-          link2={<Link to='/currencyConverter'>Conversor de divisas</Link>}
-          link3={<Link to='/users'>Conversor de divisas</Link>}
-        />
         <Switch>
-          <Route path='/' exact={true}></Route>
-          <Route path='/notesBlog'>
-            <NotesBlog />
+          <Route path='/' exact={true}>
+            <Menu currentPath='home' />
           </Route>
           <Route path='/currencyConverter'>
+            <Menu currentPath='currencyConverter' />
             <CurrencyConverter />
           </Route>
-          <Router path='/'>
-            <Users />
-          </Router>
+          <Route path='/hooks'>
+            <Menu currentPath='hooks' />
+            <Hooks />
+          </Route>
         </Switch>
       </div>
     </Router>
