@@ -45,6 +45,15 @@ function Menu({ currentPath }) {
             </Link>
           )}
         </li>
+        <li>
+          {currentPath === 'users' ? (
+            'Users'
+          ) : (
+            <Link className='link' to='/users'>
+              Users
+            </Link>
+          )}
+        </li>
       </ul>
     </nav>
   )

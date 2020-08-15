@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // Screens
 import CurrencyConverter from './screens/CurrencyConvert'
 import Hooks from './screens/Hooks'
+import Users from './screens/Users'
 
 //Components
 import Menu from './components/Menu'
@@ -25,6 +26,10 @@ function App() {
           <Route path='/hooks'>
             <Menu currentPath='hooks' />
             <Hooks />
+          </Route>
+          <Route path='/users'>
+            <Menu currentPath='users' />
+            <Users />
           </Route>
         </Switch>
       </div>
